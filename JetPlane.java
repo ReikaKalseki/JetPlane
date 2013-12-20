@@ -7,7 +7,7 @@
  * Distribution of the software in any form is only allowed with
  * explicit, prior permission from the owner.
  ******************************************************************************/
-package Reika.Jetplane;
+package Reika.JetPlane;
 
 import java.net.URL;
 
@@ -23,7 +23,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod( modid = "JetPlane", name="JetPlane", version="beta", certificateFingerprint = "@GET_FINGERPRINT@", dependencies="after:DragonAPI")
+@Mod( modid = "JetPlane", name="JetPlane", version="beta", certificateFingerprint = "@GET_FINGERPRINT@", dependencies="required-after:DragonAPI")
 @NetworkMod(clientSideRequired = true, serverSideRequired = true)
 public class JetPlane extends DragonAPIMod {
 
