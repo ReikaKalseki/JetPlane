@@ -15,13 +15,16 @@ import Reika.DragonAPI.DragonAPICore;
 import Reika.DragonAPI.Base.DragonAPIMod;
 import Reika.DragonAPI.Instantiable.IO.ModLogger;
 import Reika.DragonAPI.Libraries.ReikaRegistryHelper;
+import Reika.JetPlane.Registry.PlaneType;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 
 @Mod( modid = "JetPlane", name="JetPlane", version="beta", certificateFingerprint = "@GET_FINGERPRINT@", dependencies="required-after:DragonAPI")
 @NetworkMod(clientSideRequired = true, serverSideRequired = true)
@@ -31,6 +34,9 @@ public class JetPlane extends DragonAPIMod {
 	public static JetPlane instance = new JetPlane();
 
 	public static ModLogger logger;
+
+	@SidedProxy(clientSide="Reika.JetPlane.JetClient", serverSide="Reika.JetPlane.JetCommon")
+	public static JetCommon proxy;
 
 	@Override
 	@EventHandler
@@ -46,6 +52,14 @@ public class JetPlane extends DragonAPIMod {
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
 
+		for (int i = 0; i < PlaneType.planeList.length; i++) {
+			PlaneType p = PlaneType.planeList[i];
+			int id = EntityRegistry.findGlobalUniqueEntityId();
+			EntityRegistry.registerGlobalEntityID(p.entityClass, p.typeName, id);
+			EntityRegistry.registerModEntity(p.entityClass, p.typeName, id, instance, 128, 20, true);
+		}
+
+		proxy.registerRenderers();
 	}
 
 	@Override
