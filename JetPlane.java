@@ -41,7 +41,7 @@ public class JetPlane extends DragonAPIMod {
 	@Override
 	@EventHandler
 	public void preload(FMLPreInitializationEvent evt) {
-		logger = new ModLogger(instance, true, false, false);
+		logger = new ModLogger(instance, false);
 
 		this.basicSetup(evt);
 	}
