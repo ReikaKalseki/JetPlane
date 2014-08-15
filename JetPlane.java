@@ -9,13 +9,14 @@
  ******************************************************************************/
 package Reika.JetPlane;
 
-import java.net.URL;
-
 import Reika.DragonAPI.DragonAPICore;
 import Reika.DragonAPI.Auxiliary.CommandableUpdateChecker;
 import Reika.DragonAPI.Base.DragonAPIMod;
 import Reika.DragonAPI.Instantiable.IO.ModLogger;
 import Reika.JetPlane.Registry.PlaneType;
+
+import java.net.URL;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -23,11 +24,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
 @Mod( modid = "JetPlane", name="JetPlane", version="beta", certificateFingerprint = "@GET_FINGERPRINT@", dependencies="required-after:DragonAPI")
-@NetworkMod(clientSideRequired = true, serverSideRequired = true)
 public class JetPlane extends DragonAPIMod {
 
 	@Instance("JetPlane")

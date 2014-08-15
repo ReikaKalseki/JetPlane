@@ -9,12 +9,13 @@
  ******************************************************************************/
 package Reika.JetPlane;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
 import Reika.DragonAPI.Libraries.ReikaInventoryHelper;
 import Reika.DragonAPI.Libraries.MathSci.ReikaMathLibrary;
 import Reika.JetPlane.Entity.EntityAircraft;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
 
 public class PlaneInventory implements IInventory {
 
@@ -52,13 +53,13 @@ public class PlaneInventory implements IInventory {
 	}
 
 	@Override
-	public String getInvName() {
-		return parentEntity.getEntityName();
+	public String getInventoryName() {
+		return parentEntity.getCommandSenderName();
 	}
 
 	@Override
-	public boolean isInvNameLocalized() {
-		return false;
+	public boolean hasCustomInventoryName() {
+		return true;
 	}
 
 	@Override
@@ -67,7 +68,7 @@ public class PlaneInventory implements IInventory {
 	}
 
 	@Override
-	public void onInventoryChanged() {
+	public void markDirty() {
 
 	}
 
@@ -77,12 +78,12 @@ public class PlaneInventory implements IInventory {
 	}
 
 	@Override
-	public void openChest() {
+	public void openInventory() {
 
 	}
 
 	@Override
-	public void closeChest() {
+	public void closeInventory() {
 
 	}
 

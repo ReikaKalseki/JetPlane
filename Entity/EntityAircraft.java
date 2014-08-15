@@ -9,6 +9,8 @@
  ******************************************************************************/
 package Reika.JetPlane.Entity;
 
+import Reika.JetPlane.PlaneInventory;
+
 import java.util.ArrayList;
 
 import net.minecraft.entity.Entity;
@@ -17,8 +19,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 import org.lwjgl.input.Keyboard;
-
-import Reika.JetPlane.PlaneInventory;
 
 public abstract class EntityAircraft extends Entity {
 
@@ -256,9 +256,9 @@ public abstract class EntityAircraft extends Entity {
 	}
 
 	@Override
-	public final String getEntityName()
+	public final String getCommandSenderName()
 	{
-		return super.getEntityName();
+		return super.getCommandSenderName();
 	}
 
 	public boolean isPlayerRiding(EntityPlayer ep) {
