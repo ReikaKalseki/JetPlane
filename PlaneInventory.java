@@ -9,13 +9,12 @@
  ******************************************************************************/
 package Reika.JetPlane;
 
-import Reika.DragonAPI.Libraries.ReikaInventoryHelper;
-import Reika.DragonAPI.Libraries.MathSci.ReikaMathLibrary;
-import Reika.JetPlane.Entity.EntityAircraft;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
+import Reika.DragonAPI.Libraries.ReikaInventoryHelper;
+import Reika.DragonAPI.Libraries.MathSci.ReikaMathLibrary;
+import Reika.JetPlane.Entity.EntityAircraft;
 
 public class PlaneInventory implements IInventory {
 

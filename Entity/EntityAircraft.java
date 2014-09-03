@@ -9,8 +9,6 @@
  ******************************************************************************/
 package Reika.JetPlane.Entity;
 
-import Reika.JetPlane.PlaneInventory;
-
 import java.util.ArrayList;
 
 import net.minecraft.entity.Entity;
@@ -19,6 +17,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 import org.lwjgl.input.Keyboard;
+
+import Reika.JetPlane.PlaneInventory;
 
 public abstract class EntityAircraft extends Entity {
 
