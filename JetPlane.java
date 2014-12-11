@@ -12,7 +12,7 @@ package Reika.JetPlane;
 import java.net.URL;
 
 import Reika.DragonAPI.DragonAPICore;
-import Reika.DragonAPI.Auxiliary.CommandableUpdateChecker;
+import Reika.DragonAPI.Auxiliary.Trackers.CommandableUpdateChecker;
 import Reika.DragonAPI.Base.DragonAPIMod;
 import Reika.DragonAPI.Instantiable.IO.ModLogger;
 import Reika.JetPlane.Registry.PlaneType;
