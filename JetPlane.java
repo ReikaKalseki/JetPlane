@@ -25,7 +25,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
-@Mod( modid = "JetPlane", name="JetPlane", version="beta", certificateFingerprint = "@GET_FINGERPRINT@", dependencies="required-after:DragonAPI")
+@Mod( modid = "JetPlane", name="JetPlane", certificateFingerprint = "@GET_FINGERPRINT@", dependencies="required-after:DragonAPI")
 public class JetPlane extends DragonAPIMod {
 
 	@Instance("JetPlane")
