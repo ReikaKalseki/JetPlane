@@ -12,6 +12,7 @@ package Reika.JetPlane;
 import java.net.URL;
 
 import Reika.DragonAPI.DragonAPICore;
+import Reika.DragonAPI.DragonOptions;
 import Reika.DragonAPI.Auxiliary.Trackers.CommandableUpdateChecker;
 import Reika.DragonAPI.Base.DragonAPIMod;
 import Reika.DragonAPI.Instantiable.IO.ModLogger;
@@ -41,6 +42,8 @@ public class JetPlane extends DragonAPIMod {
 	public void preload(FMLPreInitializationEvent evt) {
 		this.verifyInstallation();
 		logger = new ModLogger(instance, false);
+		if (DragonOptions.FILELOG.getState())
+			logger.setOutput("**_Loading_Log.log");
 
 		this.basicSetup(evt);
 	}
